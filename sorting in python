@@ -1,0 +1,21 @@
+unsorted = []
+sorted = []
+n = int(input("Enter the no. of element:"))
+print("Enter the element:\n")
+for i in range(0, n):
+    x = int(input())
+    unsorted.append(x)
+print("STOP")
+count = 0
+for i in range(0, n - 1):
+    j = count
+    while (j != n):
+      if (unsorted[i] > unsorted[j]):
+        temp = unsorted[i]
+        unsorted[i] = unsorted[j]
+        unsorted[j] = temp
+count = count + 1
+
+print("sorted element:")
+for i in range(0, n):
+  print(unsorted[i])
